@@ -10,13 +10,17 @@ resolvers ++= Seq(
   "spray repo" at "http://repo.spray.io/"
 )
 
-libraryDependencies ++= Seq(
-  "io.spray"            %   "spray-can"     % "1.1-M7",
-  "io.spray"            %   "spray-routing" % "1.1-M7",
-  "io.spray"            %   "spray-testkit" % "1.1-M7",
-  "com.typesafe.akka"   %%  "akka-actor"    % "2.1.0",
-  "org.specs2"          %%  "specs2"        % "1.13" % "test"
-)
+libraryDependencies ++= {
+    val sprayVersion = "1.1-M7"
+    val akkaVersion  = "2.1.0"
+    Seq(
+      "io.spray"            %   "spray-can"     % sprayVersion,
+      "io.spray"            %   "spray-routing" % sprayVersion,
+      "io.spray"            %   "spray-testkit" % sprayVersion,
+      "com.typesafe.akka"   %%  "akka-actor"    % akkaVersion,
+      "org.specs2"          %%  "specs2"        % "1.13" % "test"
+    )
+}
 
 seq(Revolver.settings: _*)
 
