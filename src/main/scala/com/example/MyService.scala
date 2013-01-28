@@ -37,6 +37,12 @@ trait MyService extends HttpService {
           }
         }
       }
+    } ~
+    path("index") {
+      get {
+        respondWithMediaType(`text/html`) {
+          complete(html.index().toString)
+        }
+      }
     }
-
 }
