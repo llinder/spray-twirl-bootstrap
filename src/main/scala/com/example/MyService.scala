@@ -33,6 +33,9 @@ trait MyService extends HttpService {
   val myRoute =
     logRequest(showPath _) {
       get {
+        path("favicon.ico") {
+          complete(StatusCodes.NotFound)
+        } ~
         path(Rest) { path =>
           getFromResource("bootstrap/%s" format path)
         } ~
@@ -52,14 +55,19 @@ trait MyService extends HttpService {
             }
           }
         } ~
-          path("index") {
-            respondWithMediaType(`text/html`) {
-              complete(html.index().toString)
-            }
-          } ~
-          path("file") {
-            getFromResource("application.conf")
+        path("index") {
+          respondWithMediaType(`text/html`) {
+            complete(html.index().toString)
           }
+        } ~
+        path("index2") {
+          respondWithMediaType(`text/html`) {
+            complete(html.index2("Spraying some Bootstrap", "Hello Twirl served by Spray").toString)
+          }
+        } ~
+        path("file") {
+          getFromResource("application.conf")
+        }
       }
     }
 }
