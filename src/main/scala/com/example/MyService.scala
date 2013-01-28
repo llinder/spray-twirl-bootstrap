@@ -44,5 +44,8 @@ trait MyService extends HttpService {
           complete(html.index().toString)
         }
       }
+    } ~
+    path("file") {
+      getFromResource("application.conf")
     }
 }
