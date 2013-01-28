@@ -6,6 +6,10 @@ scalaVersion  := "2.10.0"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
+webappResources <<= (sourceDirectory in Compile)(_ / "webapp")
+
+resourceDirectories += webappResources
+
 resolvers ++= Seq(
   "spray repo" at "http://repo.spray.io/"
 )
@@ -25,3 +29,4 @@ libraryDependencies ++= {
 seq(Revolver.settings: _*)
 
 seq(Twirl.settings: _*)
+
