@@ -23,7 +23,8 @@ libraryDependencies ++= {
       "io.spray"            %   "spray-testkit" % sprayVersion,
       "com.typesafe.akka"   %%  "akka-actor"    % akkaVersion,
       "org.specs2"          %%  "specs2"        % "1.13" % "test",
-      "org.scalatest"       %   "scalatest_2.10" % "2.0.M5b" % "test"
+      "org.scalatest"       %   "scalatest_2.10" % "2.0.M5b" % "test",
+      "org.seleniumhq.selenium" % "selenium-java" % "2.28.0" % "test"
     )
 }
 
