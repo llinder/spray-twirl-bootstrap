@@ -25,7 +25,9 @@ Follow these steps to get started:
 4. Compile everything and run all tests:
 
         > test
-> I plan to add new tests for the new route I added.
+> Note: For the Selenium Chome test to be able to run, you need to install the [chromedriver](https://code.google.com/p/selenium/wiki/ChromeDriver) locally.
+> Read my [blogpost](http://www.diversit.eu/2013/01/selenium-testing-with-scalatest.html) about how Selenium is setup for ScalaTest.
+> And read the [ScalaTest Selenium documentation](http://www.scalatest.org/user_guide/using_selenium) for using Selenium in ScalaTests.
 
 5. Start the application:
 
