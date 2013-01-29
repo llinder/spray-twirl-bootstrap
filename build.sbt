@@ -1,6 +1,6 @@
 organization  := "com.example"
 
-version       := "0.2.1"
+version       := "0.2.2"
 
 scalaVersion  := "2.10.0"
 
@@ -22,7 +22,9 @@ libraryDependencies ++= {
       "io.spray"            %   "spray-routing" % sprayVersion,
       "io.spray"            %   "spray-testkit" % sprayVersion,
       "com.typesafe.akka"   %%  "akka-actor"    % akkaVersion,
-      "org.specs2"          %%  "specs2"        % "1.13" % "test"
+      "org.specs2"          %%  "specs2"        % "1.13" % "test",
+      "org.scalatest"       %   "scalatest_2.10" % "2.0.M5b" % "test",
+      "org.seleniumhq.selenium" % "selenium-java" % "2.28.0" % "test"
     )
 }
 
