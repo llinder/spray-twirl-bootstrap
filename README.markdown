@@ -4,7 +4,9 @@ This project is based on the [Spray Template project](https://github.com/spray/s
 I added support for serving static files, added Twitter Bootstrap files and added Twirl for templating.
 You can use this project as a template for a REST API or even serve a website.
 
-This project uses [Git Flow](https://github.com/nvie/gitflow).
+Spray routing is split up in serveral traits for static routing, twirl pages and inline html.
+
+>This project uses [Git Flow](https://github.com/nvie/gitflow).
 
 Follow these steps to get started:
 
@@ -29,7 +31,7 @@ Follow these steps to get started:
 
         > re-start
 
-6. Browse to http://localhost:8080/ , http://localhost:8080/index , http://localhost:8080/index2 , http://localhost:8080/file
+6. Browse to http://localhost:8080/
 
 7. Start the application:
 
