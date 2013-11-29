@@ -1,8 +1,8 @@
 organization  := "com.example"
 
-version       := "0.2.2"
+version       := "1-1.2-RC4"
 
-scalaVersion  := "2.10.0"
+scalaVersion  := "2.10.3"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
@@ -15,16 +15,18 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= {
-    val sprayVersion = "1.1-M7"
-    val akkaVersion  = "2.1.0"
+    val sprayVersion = "1.2-RC4"
+    val akkaVersion  = "2.2.3"
     Seq(
-      "io.spray"            %   "spray-can"     % sprayVersion,
-      "io.spray"            %   "spray-routing" % sprayVersion,
-      "io.spray"            %   "spray-testkit" % sprayVersion,
-      "com.typesafe.akka"   %%  "akka-actor"    % akkaVersion,
-      "org.specs2"          %%  "specs2"        % "1.13" % "test",
-      "org.scalatest"       %   "scalatest_2.10" % "2.0.M5b" % "test",
-      "org.seleniumhq.selenium" % "selenium-java" % "2.28.0" % "test"
+      "io.spray"                %     "spray-can"        % sprayVersion,
+      "io.spray"                %     "spray-routing"    % sprayVersion,
+      "io.spray"                %     "spray-testkit"    % sprayVersion,
+      "io.spray"                %%    "twirl-api"        % "0.6.2",
+      "com.typesafe.akka"       %%    "akka-actor"       % akkaVersion,
+      "ch.qos.logback"          %     "logback-classic"  % "1.0.13",
+      "org.specs2"              %%    "specs2"           % "2.2.3" % "test",
+      "org.scalatest"           %%    "scalatest"        % "2.0" % "test",
+      "org.seleniumhq.selenium" %     "selenium-java"    % "2.28.0" % "test"
     )
 }
 
